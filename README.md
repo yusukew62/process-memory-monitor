@@ -3,7 +3,7 @@
 ## About
 
 あるプロセスが使用している各種メモリ情報を標準出力で出力する  
-メモリ情報は /proc/\$pid/task/\$pid/status から取得している  
+メモリ情報は /proc/$pid/task/$pid/status から取得している  
 
 ## Execution
 
@@ -19,7 +19,7 @@ $ sh process_memory_monitor.sh
 
 ## Note
 
-\$3〜\$13の単位は kB
+$3〜$13の単位は kB
 
 |Column| Value  |Description |
 |:-----|:-------|:-----------|
