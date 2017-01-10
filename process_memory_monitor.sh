@@ -3,6 +3,9 @@
 # timestamp
 timestamp=`date "+%Y-%m-%d %T"`
 
+# hostname
+hostname=`hostname`
+
 # Setting the uniq process name 
 # ex) Get the forked squid PID
 process="squid-1"
@@ -25,18 +28,19 @@ vmswap=`cat /proc/$pid/task/$pid/status | grep VmSwap | awk -F: '{print $2}' | a
 
 # Note: Debugging information
 # echo $timestamp # $1
-# echo $pid       # $2
-# echo $vmpeak    # $3
-# echo $vmsize    # $4
-# echo $vmlck     # $5
-# echo $vmhwm     # $6
-# echo $vmrss     # $7
-# echo $vmdata    # $8
-# echo $vmstk     # $9
-# echo $vmexe     # $10
-# echo $vmlib     # $11
-# echo $vmpte     # $12
-# echo $vmswap    # $13
+# echo $hostname  # $2
+# echo $pid       # $3
+# echo $vmpeak    # $4
+# echo $vmsize    # $5
+# echo $vmlck     # $6
+# echo $vmhwm     # $7
+# echo $vmrss     # $8
+# echo $vmdata    # $9
+# echo $vmstk     # $10
+# echo $vmexe     # $11
+# echo $vmlib     # $12
+# echo $vmpte     # $13
+# echo $vmswap    # $14
 
 # Output by one line to the file
-echo "$timestamp,$pid,$vmpeak,$vmsize,$vmlck,$vmhwm,$vmrss,$vmdata,$vmstk,$vmexe,$vmlib,$vmpte,$vmswap"
+echo "$timestamp,$hostname,$pid,$vmpeak,$vmsize,$vmlck,$vmhwm,$vmrss,$vmdata,$vmstk,$vmexe,$vmlib,$vmpte,$vmswap"
